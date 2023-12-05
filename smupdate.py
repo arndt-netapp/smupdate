@@ -11,10 +11,10 @@
 #
 # Example of a RBAC role limiting access to a SVM and volume wildcard:
 #
-# security login role create -role smupdate_role -cmddirname "snapmirror show" -query "-destination-path svlngen4-c01-nas-svl:arndt*" -access all
+# security login role create -role smupdate_role -cmddirname "snapmirror show" -query "-destination-path svlngen4-c01-nas-svl:arndt*" -access readonly
 # security login role create -role smupdate_role -cmddirname "snapmirror update" -query "-destination-path svlngen4-c01-nas-svl:arndt*" -access all
 # security login role create -role smupdate_role -cmddirname version -access readonly
-# security login create -user-or-group-name smupdate_user -application http -authentication-method password -role smupdate_role
+# security login create -user-or-group-name smupdate_user -application ontapi -authentication-method password -role smupdate_role
 #
 # THIS SOFTWARE IS PROVIDED BY NETAPP "AS IS" AND ANY EXPRESS OR IMPLIED
 # WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
